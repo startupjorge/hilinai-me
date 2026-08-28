@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hilina'i Me
 
-## Getting Started
+Bilingual (Spanish and English) website for Maria Elena Acevedo, Conscious Transformation Facilitator, Miami and Fort Lauderdale area.
 
-First, run the development server:
+Built with Next.js 16 (App Router) and Tailwind CSS v4.
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3002. The site redirects `/` to `/es` (Spanish default) or `/en` based on the browser language.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | What it holds |
+| --- | --- |
+| `src/app/[locale]/` | Pages: home, `services`, `services/[slug]`, `about`, `book`, `contact` |
+| `src/content/site.ts` | Brand details, services, pricing, Maria Elena's story, the tagline |
+| `src/i18n/dictionaries.ts` | All UI text in both languages |
+| `src/proxy.ts` | Locale detection and redirect (Next.js 16 renamed middleware to proxy) |
+| `public/images/` | Photography (currently placeholder shots, replace with final images) |
 
-## Learn More
+To edit copy, change `src/content/site.ts` and `src/i18n/dictionaries.ts`. Everything is in one place per language.
 
-To learn more about Next.js, take a look at the following resources:
+## Environment variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy `.env.example` to `.env.local` and fill in:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_WEB3FORMS_KEY` | Contact form delivery. Get a free key at https://web3forms.com using Mane78@hotmail.com. If empty, the form falls back to opening the visitor's mail app. |
 
-## Deploy on Vercel
+## Deploy to Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push this repo to GitHub (or GitLab / Bitbucket).
+2. In Vercel, **Add New Project** and import the repo. Vercel detects Next.js automatically, no settings to change.
+3. Under **Settings, Environment Variables**, add `NEXT_PUBLIC_WEB3FORMS_KEY` with the Web3Forms key.
+4. Deploy. Vercel gives a `*.vercel.app` URL right away.
+5. To use a custom domain, add it under **Settings, Domains** and follow the DNS instructions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Every push to the default branch deploys to production. Pull requests get their own preview URL.
+
+## Still to finalize
+
+- Final logo asset (replace the placeholder mark in `src/components/Logo.tsx`)
+- Real photography in `public/images/`
+- TikTok and YouTube URLs in `src/content/site.ts`
+- Membership program price in `src/content/site.ts`
+- Real booking calendar on `/book` (Cal.com embed recommended)

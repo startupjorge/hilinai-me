@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
+/*
+  Hilina'i Me design tokens.
+  Calm, oceanic, grounded. Blues and a warm coral accent,
+  drawn from Maria Elena's mandala and her existing brand.
+*/
+
+@theme {
+  --color-paper: #f7f6f1;
+  --color-paper-deep: #eeece3;
+  --color-sand: #e4ddcd;
+
+  --color-ink: #21303a;
+  --color-ink-soft: #55636d;
+
+  --color-sea: #2f6d9e;
+  --color-sea-deep: #234f73;
+  --color-sea-light: #a7c8dd;
+  --color-mist: #dfeaf1;
+
+  --color-iris: #5b53b8;
+  --color-iris-light: #ded9f2;
+
+  --color-coral: #d9774f;
+  --color-coral-deep: #bd5c37;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+
+  --radius-xl: 1.25rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  border-color: color-mix(in srgb, var(--color-ink) 12%, transparent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-sea-light) 55%, transparent);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+.hairline {
+  border-top: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);
 }
