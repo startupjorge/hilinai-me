@@ -94,7 +94,7 @@ export const services: Service[] = [
         "Una sesión individual de una hora que trabaja tu estado emocional y tu energía. Combinamos conversación consciente, herramientas de auto-reconocimiento y sanación energética según lo que necesites ese día.",
       format: "Individual, en línea o presencial en Miami",
       duration: "1 hora",
-      price: "80 USD",
+      price: "100 USD",
       forWho:
         "Para quien quiere empezar, atender un momento puntual o probar cómo es trabajar juntas antes de comprometerse con un paquete.",
       includes: [
@@ -116,7 +116,7 @@ export const services: Service[] = [
         "A one on one session of one hour focused on your emotional state and your energy. We combine conscious conversation, self recognition tools and energy healing depending on what you need that day.",
       format: "One on one, online or in person in Miami",
       duration: "1 hour",
-      price: "80 USD",
+      price: "100 USD",
       forWho:
         "For anyone who wants to begin, tend to a specific moment, or feel what working together is like before committing to a package.",
       includes: [
@@ -144,7 +144,7 @@ export const services: Service[] = [
       format: "Individual, sesiones semanales o quincenales",
       duration: "10 sesiones de 1 hora",
       price: "720 USD",
-      priceNote: "Pago único. Incluye 10% de descuento frente a la sesión suelta.",
+      priceNote: "Pago único, equivale a 72 USD por sesión.",
       forWho:
         "Para quien está listo para mirar hacia dentro con honestidad y sostener el proceso hasta ver frutos.",
       includes: [
@@ -167,7 +167,7 @@ export const services: Service[] = [
       format: "One on one, weekly or every two weeks",
       duration: "10 sessions of 1 hour",
       price: "720 USD",
-      priceNote: "Paid in full. Includes a 10% discount compared to single sessions.",
+      priceNote: "Paid in full, 72 USD per session.",
       forWho:
         "For anyone ready to look inward with honesty and stay with the process until it bears fruit.",
       includes: [
