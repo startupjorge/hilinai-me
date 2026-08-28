@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { brand } from "@/content/site";
+import { whatsappLink } from "@/content/site";
 import type { Dictionary } from "@/i18n/dictionaries";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -20,12 +20,9 @@ export function ContactForm({ dict }: { dict: Dictionary["contactPage"] }) {
     const interest = String(data.get("interest") ?? "");
     const message = String(data.get("message") ?? "");
 
-    // No key configured: fall back to opening the visitor's mail app.
+    // Without a Web3Forms key the form cannot deliver. Point people to WhatsApp.
     if (!WEB3FORMS_KEY) {
-      const body = `${message}\n\n${interest ? `[${interest}]\n` : ""}${name}\n${email}`;
-      window.location.href = `mailto:${brand.email}?subject=${encodeURIComponent(
-        name,
-      )}&body=${encodeURIComponent(body)}`;
+      setStatus("error");
       return;
     }
 
@@ -106,7 +103,22 @@ export function ContactForm({ dict }: { dict: Dictionary["contactPage"] }) {
       <p
         className={`text-xs ${status === "error" ? "text-coral-deep" : "text-ink-soft"}`}
       >
-        {status === "error" ? dict.formError : dict.formNote}
+        {status === "error" ? (
+          <>
+            {dict.formError}{" "}
+            <a
+              href={whatsappLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline"
+            >
+              WhatsApp
+            </a>
+            .
+          </>
+        ) : (
+          dict.formNote
+        )}
       </p>
     </form>
   );

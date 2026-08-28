@@ -58,14 +58,6 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 {brand.whatsappDisplay}
               </a>
             </li>
-            <li>
-              <a
-                href={`mailto:${brand.email}`}
-                className="text-ink-soft hover:text-ink"
-              >
-                {brand.email}
-              </a>
-            </li>
           </ul>
 
           <div className="mt-5 flex items-center gap-2">

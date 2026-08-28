@@ -21,7 +21,9 @@ export const brand = {
   facebook: "https://www.facebook.com/people/Hilinai-Me/61555591816094/",
   tiktok: "", // TODO: add TikTok URL
   youtube: "", // TODO: add YouTube URL
-  email: "Mane78@hotmail.com",
+  // Contact email is intentionally not exposed on the site. Form delivery is
+  // handled by Web3Forms, which routes to the address tied to the access key,
+  // so the address never ships to the browser.
 };
 
 /** Poetic tagline, in Maria Elena's own words (from her Hilina'i Me bio). */

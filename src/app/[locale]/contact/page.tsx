@@ -26,19 +26,13 @@ export default async function ContactPage({
     label: string;
     value: string;
     href: string;
-    icon: "whatsapp" | "email" | (typeof socials)[number]["key"];
+    icon: "whatsapp" | (typeof socials)[number]["key"];
   }[] = [
     {
       label: t.whatsappLabel,
       value: brand.whatsappDisplay,
       href: whatsappLink(),
       icon: "whatsapp",
-    },
-    {
-      label: t.emailLabel,
-      value: brand.email,
-      href: `mailto:${brand.email}`,
-      icon: "email",
     },
     ...socials.map((s) => ({
       label: s.label,
@@ -80,20 +74,7 @@ export default async function ContactPage({
                 <div key={r.label} className="flex items-center justify-between gap-4 py-3.5">
                   <dt className="flex items-center gap-2.5 text-sm text-ink-soft">
                     <span className="text-sea">
-                      {r.icon === "email" ? (
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.6"
-                          className="h-4 w-4"
-                        >
-                          <rect x="3" y="5" width="18" height="14" rx="2" />
-                          <path d="m4 7 8 6 8-6" />
-                        </svg>
-                      ) : (
-                        <SocialIcon name={r.icon} className="h-4 w-4" />
-                      )}
+                      <SocialIcon name={r.icon} className="h-4 w-4" />
                     </span>
                     {r.label}
                   </dt>

@@ -41,11 +41,6 @@ export default async function BookPage({
       ? "Hola Maria Elena, quiero reservar una sesión."
       : "Hi Maria Elena, I would like to book a session.";
 
-  const emailSubject = selectedName
-    ? `${l === "es" ? "Reserva" : "Booking"}: ${selectedName}`
-    : l === "es"
-      ? "Reserva de sesión"
-      : "Session booking";
 
   return (
     <>
@@ -104,7 +99,7 @@ export default async function BookPage({
               <h2 className="font-display text-lg font-semibold text-ink">
                 {dict.contactPage.title}
               </h2>
-              <div className="mt-5 space-y-3">
+              <div className="mt-5">
                 <a
                   href={whatsappLink(waText)}
                   target="_blank"
@@ -113,12 +108,6 @@ export default async function BookPage({
                 >
                   <WhatsAppIcon className="h-4 w-4" />
                   {dict.cta.whatsapp}
-                </a>
-                <a
-                  href={`mailto:${brand.email}?subject=${encodeURIComponent(emailSubject)}`}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-sea/40 px-5 py-3 text-sm font-medium text-sea transition-colors hover:bg-sea/5"
-                >
-                  {dict.contactPage.emailLabel}
                 </a>
               </div>
               <p className="mt-4 text-xs text-ink-soft">

@@ -126,7 +126,7 @@ const dictionaries = {
       eyebrow: "Contacto",
       title: "Hablemos",
       lead:
-        "La forma más rápida de contactarme es por WhatsApp. También puedes escribirme por correo o seguir mi trabajo en Instagram.",
+        "La forma más rápida de contactarme es por WhatsApp o con el formulario de abajo. También puedes seguir mi trabajo en Instagram y Facebook.",
       whatsappLabel: "WhatsApp",
       emailLabel: "Correo",
       instagramLabel: "Instagram",
@@ -143,7 +143,7 @@ const dictionaries = {
       formSuccess:
         "Gracias por escribir. Te responderé lo antes posible.",
       formError:
-        "No se pudo enviar el mensaje. Por favor escríbeme por WhatsApp o correo.",
+        "No se pudo enviar el mensaje. Escríbeme directamente por",
       formNote:
         "Suelo responder en 1 o 2 días. Si necesitas algo urgente, escríbeme por WhatsApp.",
     },
@@ -282,7 +282,7 @@ const dictionaries = {
       eyebrow: "Contact",
       title: "Let us talk",
       lead:
-        "The fastest way to reach me is on WhatsApp. You can also email me or follow my work on Instagram.",
+        "The fastest way to reach me is on WhatsApp or through the form below. You can also follow my work on Instagram and Facebook.",
       whatsappLabel: "WhatsApp",
       emailLabel: "Email",
       instagramLabel: "Instagram",
@@ -297,8 +297,7 @@ const dictionaries = {
       formSubmit: "Send message",
       formSending: "Sending...",
       formSuccess: "Thank you for reaching out. I will get back to you soon.",
-      formError:
-        "The message could not be sent. Please reach me on WhatsApp or by email.",
+      formError: "The message could not be sent. Reach me directly on",
       formNote:
         "I usually reply within 1 to 2 days. For anything urgent, message me on WhatsApp.",
     },
