@@ -43,10 +43,17 @@ Copy `.env.example` to `.env.local` and fill in:
 
 Every push to the default branch deploys to production. Pull requests get their own preview URL.
 
+## Booking
+
+`/book` embeds Maria Elena's Cal.com calendar (`maria-elena-acevedo/30min`) via
+`@calcom/embed-react`. The link and namespace live in `src/content/site.ts`
+(`booking`). To add more event types later (for example a dedicated 10 session
+intake), create them in Cal.com and map each service slug to its `calLink`.
+
 ## Still to finalize
 
 - Final logo asset (replace the placeholder mark in `src/components/Logo.tsx`)
 - Real photography in `public/images/`
 - TikTok and YouTube URLs in `src/content/site.ts`
 - Membership program price in `src/content/site.ts`
-- Real booking calendar on `/book` (Cal.com embed recommended)
+- Web3Forms key in `.env.local` / Vercel env vars

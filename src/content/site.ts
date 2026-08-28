@@ -30,6 +30,12 @@ export const tagline: Record<Locale, string> = {
   en: "Come and discover, in an easy way, the path of self recognition. Meet your roots and where you come from, find your power and walk with confidence.",
 };
 
+/** Cal.com booking. Namespace and calLink come from her Cal embed snippet. */
+export const booking = {
+  namespace: "30min",
+  calLink: "maria-elena-acevedo/30min",
+};
+
 export function whatsappLink(text?: string) {
   const base = `https://wa.me/${brand.whatsapp.replace(/[^\d]/g, "")}`;
   return text ? `${base}?text=${encodeURIComponent(text)}` : base;

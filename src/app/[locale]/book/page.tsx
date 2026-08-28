@@ -9,6 +9,7 @@ import {
   whatsappLink,
 } from "@/content/site";
 import { Container, Eyebrow, WhatsAppIcon } from "@/components/ui";
+import { CalEmbed } from "@/components/CalEmbed";
 
 export async function generateMetadata({
   params,
@@ -71,26 +72,17 @@ export default async function BookPage({
             <h2 className="font-display text-xl font-semibold text-ink">
               {t.calendarTitle}
             </h2>
-            <div className="mt-4 flex min-h-64 flex-col items-center justify-center rounded-2xl border border-dashed border-ink/25 bg-paper-deep/50 p-8 text-center">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sea/10 text-sea">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  className="h-6 w-6"
-                >
-                  <rect x="3" y="4.5" width="18" height="16" rx="2" />
-                  <path d="M3 9h18M8 2.5v4M16 2.5v4" />
-                </svg>
-              </span>
-              <p className="mt-4 text-sm font-medium text-ink">
-                {t.calendarPlaceholder}
-              </p>
-              <p className="mt-2 max-w-sm text-sm text-ink-soft">
-                {t.calendarNote}
-              </p>
+            <div className="mt-4 h-[40rem] overflow-y-auto rounded-2xl border border-ink/10 bg-paper">
+              <CalEmbed
+                locale={l}
+                notes={
+                  selectedName
+                    ? `${t.chooseService}: ${selectedName}`
+                    : undefined
+                }
+              />
             </div>
+            <p className="mt-3 text-xs text-ink-soft">{t.calendarNote}</p>
 
             <h2 className="mt-10 font-display text-xl font-semibold text-ink">
               {t.stepsTitle}
