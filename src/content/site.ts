@@ -143,8 +143,8 @@ export const services: Service[] = [
         "Diez sesiones individuales de una hora que trabajan tu estado emocional y tu energía a lo largo del tiempo. El proceso completo de Hilina'i Me: auto-reconocimiento, sanación energética, empoderamiento y confianza, a un ritmo humano.",
       format: "Individual, sesiones semanales o quincenales",
       duration: "10 sesiones de 1 hora",
-      price: "720 USD",
-      priceNote: "Pago único, equivale a 72 USD por sesión.",
+      price: "900 USD",
+      priceNote: "Pago único. Incluye 10% de descuento frente a la sesión suelta (90 USD por sesión).",
       forWho:
         "Para quien está listo para mirar hacia dentro con honestidad y sostener el proceso hasta ver frutos.",
       includes: [
@@ -166,8 +166,8 @@ export const services: Service[] = [
         "Ten one on one sessions of one hour working with your emotional state and your energy over time. The full Hilina'i Me process: self recognition, energy healing, empowerment and confidence, at a human pace.",
       format: "One on one, weekly or every two weeks",
       duration: "10 sessions of 1 hour",
-      price: "720 USD",
-      priceNote: "Paid in full, 72 USD per session.",
+      price: "900 USD",
+      priceNote: "Paid in full. Includes a 10% discount compared to single sessions (90 USD per session).",
       forWho:
         "For anyone ready to look inward with honesty and stay with the process until it bears fruit.",
       includes: [
