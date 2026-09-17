@@ -123,9 +123,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   </p>
                   <p className="mt-4 text-sm font-medium text-sea">
                     {c.price}
-                    <span className="ml-2 text-ink-soft/70 transition-transform group-hover:translate-x-0.5 inline-block">
-                      &rarr;
-                    </span>
                   </p>
                 </Link>
               );
@@ -133,7 +130,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           </div>
           <div className="mt-10">
             <Button href={localePath(l, "/services")} variant="ghost">
-              {dict.cta.allServices} &rarr;
+              {dict.cta.allServices}
             </Button>
           </div>
         </Container>

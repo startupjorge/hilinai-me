@@ -49,7 +49,7 @@ export default async function ServiceDetailPage({
             href={localePath(l, "/services")}
             className="text-sm text-ink-soft hover:text-ink"
           >
-            &larr; {t.backToServices}
+            {t.backToServices}
           </Link>
           <div className="mt-6 flex items-center gap-3">
             <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sea/10 text-sea">
