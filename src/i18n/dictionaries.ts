@@ -20,24 +20,25 @@ const dictionaries = {
       contactMe: "Escríbeme",
     },
     home: {
-      eyebrow: "Transformación consciente",
       heroTitle: "Vuelve a ti. Camina con confianza.",
       heroLead:
-        "La transformación personal es un proceso de cambio y crecimiento que te ayuda a alcanzar tus metas y a vivir una vida más plena. ¿Qué quieres cambiar en tu vida?",
-      heroNote: "Acompañamiento individual y en grupo, en español e inglés, desde Miami.",
-      pillarsTitle: "Tres pilares de este camino",
+        "Hilinai es una invitación al reconocimiento, la claridad y la acción consciente. Te invita a mirar tu historia desde otra perspectiva, reconocer los patrones que moldean cómo piensas, sientes y actúas, y reconectar con la fuerza, la sabiduría y los recursos que has construido en el camino.",
+      heroLead2:
+        "No necesitas a alguien que camine el camino por ti. A veces necesitas una perspectiva distinta para ver con más claridad lo que ya está en ti, y la confianza para pasar de entender a actuar.",
+      heroNote: "Experiencias individuales y en grupo, disponibles virtualmente en español e inglés.",
+      pillarsTitle: "Tres pilares del camino Hilinai",
       pillars: [
         {
-          title: "Auto-reconocimiento",
-          body: "Verte con honestidad y sin juicio. Entender de dónde vienes y qué te mueve.",
+          title: "Reconocimiento",
+          body: "Mírate más allá de la historia que siempre te has contado sobre quién eres. Reconocer significa mirar tus experiencias desde otra perspectiva, identificar los patrones que dan forma a cómo piensas, sientes y actúas, y descubrir la fuerza, la sabiduría y los recursos que has construido en el camino.",
         },
         {
           title: "Empoderamiento",
-          body: "Recuperar tu voz y tu capacidad de decidir. Pasar de la duda a la acción.",
+          body: "Reconoce que tienes una elección. El empoderamiento comienza cuando la conciencia se vuelve responsabilidad: entender qué te corresponde cambiar, cuestionar las creencias que ya no te sirven y elegir cómo quieres responder en lugar de repetir automáticamente lo que ya conoces.",
         },
         {
           title: "Confianza",
-          body: "Construir una base firme dentro de ti que sostiene incluso cuando todo cambia.",
+          body: "Convierte lo que reconoces en tu forma de vivir. La confianza crece cuando empiezas a actuar desde la sabiduría, las capacidades, los valores y los recursos que reconoces como propios. No es la certeza de que todo saldrá como lo planeaste, es saber que puedes confiar en ti misma mientras avanzas.",
         },
       ],
       servicesTitle: "Formas de trabajar juntas",
@@ -45,12 +46,12 @@ const dictionaries = {
         "Cada proceso se adapta a tu momento. Si no sabes por dónde empezar, una Sesión Individual es un buen primer paso.",
       aboutTitle: "Hola, soy Maria Elena",
       aboutBody:
-        "Soy Facilitadora de Transformación Consciente. Acompaño a personas que sienten que es momento de un cambio real, no de una motivación pasajera. Mi trabajo une el auto-reconocimiento, la reconexión con las raíces y herramientas prácticas para sostener lo que descubres.",
+        "Creé Hilinai desde una convicción simple: muchas veces llevamos dentro más sabiduría, fuerza y recursos de los que reconocemos. Acompaño a personas que están listas para mirar su historia con honestidad y reconectar con lo que ya es suyo.",
       aboutLink: "Conocer mi historia",
       quoteTitle: "En palabras de Maria Elena",
       quotes: [
-        "La transformación personal es un proceso de cambio y crecimiento que te ayuda a alcanzar tus metas y a vivir una vida más plena. ¿Qué cambios quieres hacer en tu vida?",
-        "El dolor es una oportunidad para crecer, aprender y transformar nuestra vida. No dejes que el dolor te consuma. Úsalo como impulso para tu crecimiento y tu transformación.",
+        "La compasión es honrar el proceso de otra persona sin interferir en él.",
+        "No necesitas a alguien que camine el camino por ti. A veces necesitas una perspectiva distinta para ver con más claridad lo que ya está en ti, y la confianza para pasar de entender a actuar.",
       ],
       ctaTitle: "¿Lista para empezar?",
       ctaBody:
@@ -74,34 +75,34 @@ const dictionaries = {
     aboutPage: {
       eyebrow: "Sobre Maria Elena",
       title: "Maria Elena Acevedo",
-      role: "Facilitadora de Transformación Consciente",
-      intro:
-        "Vivo en Miami y acompaño a personas de habla hispana e inglesa en procesos de cambio profundo. Creo en un trabajo que va a la raíz: entender de dónde vienes, reconciliarte con tu historia y construir desde ahí una confianza que no depende de las circunstancias.",
-      storyTitle: "Mi camino",
-      story: [
-        "Hilina'i es una palabra hawaiana que habla de confianza y de apoyarse. Ese es el corazón de mi trabajo: crear un espacio seguro donde puedas apoyarte mientras vuelves a ti.",
-        "Trabajo con quienes sienten que algo tiene que cambiar y no saben por dónde empezar, con migrantes que cargan una historia lejos de su tierra, y con personas que quieren tomar decisiones desde su propio criterio y no desde el miedo.",
-        "Mi enfoque combina conversación guiada, ejercicios de auto-reconocimiento y prácticas de arraigo. Sin fórmulas mágicas y a un ritmo humano.",
+      role: "Fundadora de Hilinai | Creadora del Método Hilinai™",
+      introParagraphs: [
+        "Creé Hilinai desde una convicción simple: muchas veces llevamos dentro más sabiduría, fuerza y recursos de los que reconocemos.",
+        "Mi trabajo está enraizado en escuchar sin juicio, hacer las preguntas que invitan a una perspectiva distinta y ayudar a las personas a reconocer los patrones, creencias y experiencias que han dado forma a cómo se ven a sí mismas y a sus vidas.",
+        "No creo que mi papel sea decirle a alguien en quién debería convertirse ni caminar su camino por esa persona. Creo un espacio donde las personas pueden mirar su historia con mayor claridad, reconocer lo que ya está en ellas y decidir por sí mismas qué quieren llevar consigo, qué están listas para cuestionar y cómo eligen moverse.",
+        "Hilinai no se trata de convertirte en alguien más. Se trata de reconocerte más plenamente, y de confiar en ti misma lo suficiente para actuar desde ese reconocimiento. Trabajo de forma virtual con individuos y grupos, en español e inglés.",
       ],
-      approachTitle: "Cómo acompaño",
+      storyTitle: "Mi camino",
+      approachTitle: "Cómo trabajo",
       approach: [
         {
-          title: "A la raíz, no al síntoma",
-          body: "Miramos lo que sostiene el patrón, no solo lo que se ve en la superficie.",
+          title: "Perspectiva antes que respuestas",
+          body: "No te digo lo que significa tu historia. La miramos juntas desde distintas perspectivas, para que puedas reconocer patrones, cuestionar lo que has dado por cierto y llegar a tu propia comprensión.",
         },
         {
-          title: "A tu ritmo",
-          body: "El proceso respeta tus tiempos. No hay prisa por llegar a ningún lado.",
+          title: "Sin juicio",
+          body: "Tu historia tiene un lugar aquí, incluyendo las partes que pueden sentirse difíciles, contradictorias, incómodas o difíciles de decir en voz alta. El trabajo empieza por ver lo que hay, no por juzgar lo que debería o no debería estar ahí.",
         },
         {
-          title: "Con herramientas que quedan",
-          body: "Sales con prácticas concretas que puedes seguir usando por tu cuenta.",
+          title: "Herramientas que puedes hacer tuyas",
+          body: "Puedo ofrecer preguntas, reflexiones, ejercicios y herramientas prácticas en el camino. Tú decides qué resuena, qué practicas y qué eliges poner en marcha en tu propia vida.",
         },
         {
-          title: "En dos idiomas",
-          body: "Puedes hacer todo el proceso en español, en inglés o combinando ambos.",
+          title: "Tu camino, tu ritmo",
+          body: "No hay una versión tuya que esté tratando de crear. Puedo caminar a tu lado, ofrecer perspectiva y ayudarte a reconocer lo que puede ser difícil de ver desde donde estás. Las decisiones, y el camino, siguen siendo tuyas.",
         },
       ],
+      philosophyLabel: "Filosofía",
       ctaTitle: "Conversemos",
       ctaBody: "Si algo de esto resuena contigo, escríbeme y vemos si es buen momento para empezar.",
     },
@@ -117,7 +118,7 @@ const dictionaries = {
       stepsTitle: "Cómo funciona",
       steps: [
         "Elige el día y la hora que te funcione en el calendario.",
-        "Recibes la confirmación con el enlace de la videollamada o el punto de encuentro en Miami.",
+        "Recibes la confirmación por correo con el enlace de la videollamada.",
         "Si aplica, te envío un cuestionario breve para preparar la sesión.",
       ],
       chooseService: "Proceso de interés",
@@ -126,13 +127,11 @@ const dictionaries = {
       eyebrow: "Contacto",
       title: "Hablemos",
       lead:
-        "La forma más rápida de contactarme es por WhatsApp o con el formulario de abajo. También puedes seguir mi trabajo en Instagram y Facebook.",
+        "La forma más rápida de contactarme es por WhatsApp o con el formulario de abajo. También puedes seguir mi trabajo en Instagram.",
       whatsappLabel: "WhatsApp",
       emailLabel: "Correo",
       instagramLabel: "Instagram",
-      locationLabel: "Ubicación",
-      locationValue:
-        "Área de Miami y Fort Lauderdale, Florida. Sesiones en línea y presenciales.",
+      locationLabel: "Disponibilidad",
       formTitle: "Envíame un mensaje",
       formName: "Nombre",
       formEmail: "Correo",
@@ -148,7 +147,6 @@ const dictionaries = {
         "Suelo responder en 1 o 2 días. Si necesitas algo urgente, escríbeme por WhatsApp.",
     },
     footer: {
-      tagline: "Transformación consciente desde Miami. Auto-reconocimiento, empoderamiento y confianza.",
       nav: "Navegación",
       contact: "Contacto",
       rights: "Todos los derechos reservados.",
@@ -175,24 +173,25 @@ const dictionaries = {
       contactMe: "Get in touch",
     },
     home: {
-      eyebrow: "Conscious transformation",
       heroTitle: "Come back to yourself. Walk with confidence.",
       heroLead:
-        "Personal transformation is a process of change and growth that helps you reach your goals and live a fuller life. What do you want to change in your life?",
-      heroNote: "One on one and group guidance, in Spanish and English, from Miami.",
-      pillarsTitle: "Three pillars of this path",
+        "Hilinai is an invitation to recognition, clarity, and conscious action. It invites you to look at your story from a different perspective, recognize the patterns shaping the way you think, feel, and act, and reconnect with the strengths, wisdom, and resources you have built along the way.",
+      heroLead2:
+        "You don't need someone to walk the path for you. Sometimes, you need a different perspective to see more clearly what is already within you, and the confidence to move from understanding into action.",
+      heroNote: "Individual and group experiences, available virtually in English and Spanish.",
+      pillarsTitle: "Three pillars of the Hilinai path",
       pillars: [
         {
-          title: "Self recognition",
-          body: "Seeing yourself honestly and without judgment. Understanding where you come from and what moves you.",
+          title: "Recognition",
+          body: "See yourself beyond the story you have always told about who you are. Recognition means looking at your experiences from a different perspective, identifying the patterns that shape the way you think, feel, and act, and discovering the strengths, wisdom, and resources you have built along the way.",
         },
         {
           title: "Empowerment",
-          body: "Reclaiming your voice and your ability to decide. Moving from doubt into action.",
+          body: "Recognize that you have a choice. Empowerment begins when awareness becomes responsibility: understanding what is yours to change, questioning the beliefs that no longer serve you, and choosing how you want to respond instead of automatically repeating what you already know.",
         },
         {
           title: "Confidence",
-          body: "Building a firm base inside yourself that holds even when everything changes.",
+          body: "Turn what you recognize into the way you live. Confidence grows when you begin to act from the wisdom, abilities, values, and resources you recognize as your own. It is not certainty that everything will go as planned, it is knowing that you can trust yourself as you move forward.",
         },
       ],
       servicesTitle: "Ways to work together",
@@ -200,12 +199,12 @@ const dictionaries = {
         "Every process adapts to your moment. If you are not sure where to start, a Single Session is a good first step.",
       aboutTitle: "Hello, I am Maria Elena",
       aboutBody:
-        "I am a Conscious Transformation Facilitator. I walk alongside people who feel it is time for real change, not passing motivation. My work joins self recognition, reconnection with your roots and practical tools to hold what you discover.",
+        "I created Hilinai from a simple conviction: we often carry within us more wisdom, strength, and resources than we recognize. I walk alongside people who are ready to look at their story with honesty and reconnect with what is already theirs.",
       aboutLink: "Read my story",
       quoteTitle: "In Maria Elena's words",
       quotes: [
-        "Personal transformation is a process of change and growth that can help you achieve your goals and live a more fulfilling life. What changes do you want to make in your life?",
-        "Pain is an opportunity to grow, to learn, and to transform our lives. Don't let pain consume you, but instead use it as fuel to drive your growth and transformation.",
+        "Compassion is honoring another person's process without interfering with it.",
+        "You don't need someone to walk the path for you. Sometimes, you need a different perspective to see more clearly what is already within you, and the confidence to move from understanding into action.",
       ],
       ctaTitle: "Ready to begin?",
       ctaBody:
@@ -229,34 +228,34 @@ const dictionaries = {
     aboutPage: {
       eyebrow: "About Maria Elena",
       title: "Maria Elena Acevedo",
-      role: "Conscious Transformation Facilitator",
-      intro:
-        "I live in Miami and I work with Spanish and English speaking people through processes of deep change. I believe in work that goes to the root: understanding where you come from, making peace with your story and building from there a confidence that does not depend on circumstances.",
-      storyTitle: "My path",
-      story: [
-        "Hilina'i is a Hawaiian word about trust and leaning on something. That is the heart of my work: creating a safe space where you can lean while you come back to yourself.",
-        "I work with people who feel that something has to change and do not know where to start, with migrants who carry a story far from home, and with people who want to make decisions from their own judgment rather than from fear.",
-        "My approach combines guided conversation, self recognition exercises and grounding practices. No magic formulas, and at a human pace.",
+      role: "Founder of Hilinai | Creator of the Hilinai™ Method",
+      introParagraphs: [
+        "I created Hilinai from a simple conviction: we often carry within us more wisdom, strength, and resources than we recognize.",
+        "My work is rooted in listening without judgment, asking the questions that invite a different perspective, and helping people recognize the patterns, beliefs, and experiences that have shaped the way they see themselves and their lives.",
+        "I do not believe it is my role to tell someone who they should become or to walk their path for them. I create a space where people can look at their story with greater clarity, recognize what is already within them, and decide for themselves what they want to carry forward, what they are ready to question, and how they choose to move.",
+        "Hilinai is not about becoming someone else. It is about recognizing yourself more fully, and trusting yourself enough to act from that recognition. I work virtually with individuals and groups in English and Spanish.",
       ],
+      storyTitle: "My path",
       approachTitle: "How I work",
       approach: [
         {
-          title: "Root, not symptom",
-          body: "We look at what holds the pattern in place, not only what shows on the surface.",
+          title: "Perspective before answers",
+          body: "I don't tell you what your story means. We look at it together from different perspectives, so you can recognize patterns, question what you have assumed to be true, and arrive at your own understanding.",
         },
         {
-          title: "At your pace",
-          body: "The process respects your timing. There is no rush to get anywhere.",
+          title: "Without judgment",
+          body: "Your story has a place here, including the parts that may feel difficult, contradictory, uncomfortable, or hard to say out loud. The work begins with seeing what is there; not judging what should or should not be there.",
         },
         {
-          title: "With tools that stay",
-          body: "You leave with concrete practices you can keep using on your own.",
+          title: "Tools you can make your own",
+          body: "I may offer questions, reflections, exercises, and practical tools along the way. You decide what resonates, what you practice, and what you choose to put into motion in your own life.",
         },
         {
-          title: "In two languages",
-          body: "You can do the whole process in Spanish, in English or a mix of both.",
+          title: "Your path, your pace",
+          body: "There is no version of you that I am trying to create. I can walk alongside you, offer perspective, and help you recognize what may be difficult to see from where you are. The choices, and the path, remain yours.",
         },
       ],
+      philosophyLabel: "Philosophy",
       ctaTitle: "Let us talk",
       ctaBody:
         "If any of this resonates with you, send me a message and we will see if it is a good time to start.",
@@ -273,7 +272,7 @@ const dictionaries = {
       stepsTitle: "How it works",
       steps: [
         "Pick the day and time that works for you on the calendar.",
-        "You receive a confirmation with the video call link or the meeting point in Miami.",
+        "You receive a confirmation by email with the video call link.",
         "If it applies, I send you a short questionnaire to prepare for the session.",
       ],
       chooseService: "Process of interest",
@@ -282,13 +281,11 @@ const dictionaries = {
       eyebrow: "Contact",
       title: "Let us talk",
       lead:
-        "The fastest way to reach me is on WhatsApp or through the form below. You can also follow my work on Instagram and Facebook.",
+        "The fastest way to reach me is on WhatsApp or through the form below. You can also follow my work on Instagram.",
       whatsappLabel: "WhatsApp",
       emailLabel: "Email",
       instagramLabel: "Instagram",
-      locationLabel: "Location",
-      locationValue:
-        "Miami and Fort Lauderdale area, Florida. Online and in person sessions.",
+      locationLabel: "Availability",
       formTitle: "Send me a message",
       formName: "Name",
       formEmail: "Email",
@@ -302,7 +299,6 @@ const dictionaries = {
         "I usually reply within 1 to 2 days. For anything urgent, message me on WhatsApp.",
     },
     footer: {
-      tagline: "Conscious transformation from Miami. Self recognition, empowerment and confidence.",
       nav: "Navigation",
       contact: "Contact",
       rights: "All rights reserved.",

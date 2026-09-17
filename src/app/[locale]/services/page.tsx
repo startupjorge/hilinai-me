@@ -50,7 +50,7 @@ export default async function ServicesPage({
                         <ServiceIcon name={s.icon} />
                       </span>
                       {s.featured && (
-                        <span className="rounded-full bg-coral/15 px-3 py-1 text-xs font-medium text-coral-deep">
+                        <span className="rounded-full bg-sand-deep/20 px-3 py-1 text-xs font-medium text-sand-deep">
                           {l === "es" ? "Proceso completo" : "Full process"}
                         </span>
                       )}

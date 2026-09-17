@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { localePath } from "@/i18n/routing";
-import { services, serviceCopy, brand, tagline, whatsappLink } from "@/content/site";
+import { services, serviceCopy, brand, slogan, whatsappLink } from "@/content/site";
 import { Button, Container, Eyebrow, SectionHeading, WhatsAppIcon } from "@/components/ui";
 import { ServiceIcon } from "@/components/ServiceIcon";
 
@@ -31,15 +31,15 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <section className="relative overflow-hidden">
         <Container className="grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div>
-            <Eyebrow>{t.eyebrow}</Eyebrow>
+            <Eyebrow>{slogan}</Eyebrow>
             <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl">
               {t.heroTitle}
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
               {t.heroLead}
             </p>
-            <p className="mt-5 max-w-xl border-l-2 border-sea/30 pl-4 font-display text-base italic leading-relaxed text-ink">
-              {tagline[l]}
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-soft">
+              {t.heroLead2}
             </p>
             <p className="mt-4 max-w-xl text-sm text-ink-soft/80">{t.heroNote}</p>
             <div className="mt-8 flex flex-wrap gap-3">

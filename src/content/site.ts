@@ -1,35 +1,39 @@
 import type { Locale } from "@/i18n/config";
 
 /**
- * Central content for the Hilina'i Me site.
+ * Central content for the HILINAI site.
  * Every string lives here in both languages so copy edits stay in one place.
- * Pricing and program details mirror Maria Elena's existing site. Items marked
- * TODO still need her confirmation.
+ *
+ * Brand naming (from Maria Elena's brand guide, "HILINAI web.docx"):
+ * the company and brand name is HILINAI. Hilinai.me is the domain only,
+ * never the brand name. The method is the Hilinai™ Method.
  */
 
 export const brand = {
-  name: "Hilina'i Me",
+  name: "HILINAI",
+  method: "Hilinai™ Method",
   practitioner: "Maria Elena Acevedo",
-  roleEs: "Facilitadora de Transformación Consciente",
-  roleEn: "Conscious Transformation Facilitator",
+  roleEs: "Fundadora de Hilinai | Creadora del Método Hilinai™",
+  roleEn: "Founder of Hilinai | Creator of the Hilinai™ Method",
   legalName: "Maria Elena Acevedo LLC",
-  city: "Miami-Fort Lauderdale Area, Florida",
+  availabilityEs: "Virtual · Español e inglés",
+  availabilityEn: "Virtual · English & Spanish",
   whatsapp: "+17864844514",
-  whatsappDisplay: "+1 (786) 484 4514",
+  whatsappDisplay: "+1 (786) 484-4514",
+  email: "hilinai2me@gmail.com",
   instagram: "https://www.instagram.com/hilinai_me/",
-  instagramPersonal: "https://www.instagram.com/mariaacevedo2321/",
   facebook: "https://www.facebook.com/people/Hilinai-Me/61555591816094/",
   tiktok: "", // TODO: add TikTok URL
   youtube: "", // TODO: add YouTube URL
-  // Contact email is intentionally not exposed on the site. Form delivery is
-  // handled by Web3Forms, which routes to the address tied to the access key,
-  // so the address never ships to the browser.
 };
 
-/** Poetic tagline, in Maria Elena's own words (from her Hilina'i Me bio). */
+/** Fixed English brand slogan. Used as-is in both locales, like a wordmark. */
+export const slogan = "TRUST YOUR CONFIDENCE";
+
+/** Brand message shown under the logo in the footer. Mirrors the hero headline. */
 export const tagline: Record<Locale, string> = {
-  es: "Ven y descubre de manera fácil el camino del auto-reconocimiento, encuéntrate con tus raíces y con el lugar de donde vienes, empodérate y camina con confianza.",
-  en: "Come and discover, in an easy way, the path of self recognition. Meet your roots and where you come from, find your power and walk with confidence.",
+  es: "Vuelve a ti. Camina con confianza.",
+  en: "Come back to yourself. Walk with confidence.",
 };
 
 /** Cal.com booking. Namespace and calLink come from her Cal embed snippet. */
@@ -89,45 +93,47 @@ export const services: Service[] = [
     icon: "spark",
     es: {
       name: "Sesión Individual",
-      tagline: "Un encuentro de una hora para tu estado emocional y tu energía.",
+      tagline:
+        "Una sesión de una hora para explorar lo que está presente, ganar perspectiva y reconocer qué está pidiendo tu atención.",
       summary:
-        "Una sesión individual de una hora que trabaja tu estado emocional y tu energía. Combinamos conversación consciente, herramientas de auto-reconocimiento y sanación energética según lo que necesites ese día.",
-      format: "Individual, en línea o presencial en Miami",
+        "Una sesión individual de una hora para mirar tu momento actual desde otra perspectiva. A través de la conversación y algunas preguntas, reconocemos juntas los patrones y recursos que ya tienes.",
+      format: "Individual, en línea",
       duration: "1 hora",
       price: "100 USD",
       forWho:
-        "Para quien quiere empezar, atender un momento puntual o probar cómo es trabajar juntas antes de comprometerse con un paquete.",
+        "Para quien quiere empezar, atender un momento puntual o sentir cómo es trabajar juntas antes de comprometerse con un paquete.",
       includes: [
         "Sesión individual de 60 minutos",
-        "Lectura de tu estado emocional y energético",
-        "Prácticas sencillas para los días siguientes",
-        "Espacio confidencial y sin juicio",
+        "Espacio de escucha sin juicio",
+        "Preguntas y perspectiva sobre tu momento actual",
+        "Alguna práctica o herramienta para llevar contigo",
       ],
       outcomes: [
         "Más claridad sobre lo que estás atravesando",
-        "Herramientas concretas para sostener la semana",
+        "Una perspectiva distinta sobre tu propia historia",
         "Un primer paso hacia el cambio que buscas",
       ],
     },
     en: {
       name: "Single Session",
-      tagline: "A one hour meeting for your emotional state and your energy.",
+      tagline:
+        "A one hour individual session to explore what is present, gain perspective, and recognize what may be asking for your attention.",
       summary:
-        "A one on one session of one hour focused on your emotional state and your energy. We combine conscious conversation, self recognition tools and energy healing depending on what you need that day.",
-      format: "One on one, online or in person in Miami",
+        "A one on one session of one hour to look at your current moment from a different perspective. Through conversation and a few questions, we recognize together the patterns and resources you already have.",
+      format: "One on one, online",
       duration: "1 hour",
       price: "100 USD",
       forWho:
         "For anyone who wants to begin, tend to a specific moment, or feel what working together is like before committing to a package.",
       includes: [
         "A 60 minute one on one session",
-        "A reading of your emotional and energetic state",
-        "Simple practices for the days that follow",
-        "A confidential space without judgment",
+        "A space to be heard without judgment",
+        "Questions and perspective on your current moment",
+        "A practice or tool to take with you",
       ],
       outcomes: [
         "More clarity about what you are going through",
-        "Concrete tools to hold the week",
+        "A different perspective on your own story",
         "A first step toward the change you are looking for",
       ],
     },
@@ -138,18 +144,19 @@ export const services: Service[] = [
     featured: true,
     es: {
       name: "Paquete de 10 Sesiones",
-      tagline: "Un acompañamiento sostenido para un cambio real y duradero.",
+      tagline:
+        "Una serie de sesiones individuales para quienes quieren tiempo y espacio para explorar patrones, profundizar el reconocimiento y poner en práctica lo que descubren.",
       summary:
-        "Diez sesiones individuales de una hora que trabajan tu estado emocional y tu energía a lo largo del tiempo. El proceso completo de Hilina'i Me: auto-reconocimiento, sanación energética, empoderamiento y confianza, a un ritmo humano.",
-      format: "Individual, sesiones semanales o quincenales",
+        "Diez sesiones individuales de una hora, a lo largo del tiempo. El camino completo de Hilinai: reconocimiento, empoderamiento y confianza, a un ritmo humano.",
+      format: "Individual, en línea, sesiones semanales o quincenales",
       duration: "10 sesiones de 1 hora",
-      price: "900 USD",
-      priceNote: "Pago único. Incluye 10% de descuento frente a la sesión suelta (90 USD por sesión).",
+      price: "920 USD",
+      priceNote: "Pago único, equivale a 92 USD por sesión.",
       forWho:
         "Para quien está listo para mirar hacia dentro con honestidad y sostener el proceso hasta ver frutos.",
       includes: [
         "Diez sesiones individuales de 60 minutos",
-        "Trabajo continuo sobre tu estado emocional y energético",
+        "Trabajo continuo sobre los patrones que se repiten",
         "Prácticas y ejercicios entre sesiones",
         "Apoyo breve por mensaje entre encuentros",
       ],
@@ -161,18 +168,19 @@ export const services: Service[] = [
     },
     en: {
       name: "10 Session Package",
-      tagline: "Sustained guidance for change that is real and lasting.",
+      tagline:
+        "A series of individual sessions for those who want the time and space to explore patterns, deepen recognition, and put new awareness into practice.",
       summary:
-        "Ten one on one sessions of one hour working with your emotional state and your energy over time. The full Hilina'i Me process: self recognition, energy healing, empowerment and confidence, at a human pace.",
-      format: "One on one, weekly or every two weeks",
+        "Ten one on one sessions of one hour, over time. The full Hilinai path: recognition, empowerment and confidence, at a human pace.",
+      format: "One on one, online, weekly or every two weeks",
       duration: "10 sessions of 1 hour",
-      price: "900 USD",
-      priceNote: "Paid in full. Includes a 10% discount compared to single sessions (90 USD per session).",
+      price: "920 USD",
+      priceNote: "Paid in full, works out to 92 USD per session.",
       forWho:
         "For anyone ready to look inward with honesty and stay with the process until it bears fruit.",
       includes: [
         "Ten 60 minute one on one sessions",
-        "Ongoing work with your emotional and energetic state",
+        "Ongoing work with the patterns that keep repeating",
         "Practices and exercises between sessions",
         "Brief message support between meetings",
       ],
@@ -188,20 +196,20 @@ export const services: Service[] = [
     icon: "circle",
     es: {
       name: "Programa de Membresía",
-      tagline: "Lecciones, ejercicios y una comunidad que camina contigo.",
+      tagline: "Lecciones, programas, ejercicios y una comunidad que camina contigo.",
       summary:
-        "Una membresía con lecciones en video, ejercicios interactivos y herramientas prácticas para ver con nuevos ojos y transformar tu vida. Incluye una comunidad de personas comprometidas con encontrar libertad en todas las áreas de su vida.",
+        "Un espacio para la exploración continua, con lecciones, ejercicios guiados, herramientas prácticas y programas que invitan a mirar tus experiencias desde otras perspectivas y a poner en práctica lo que reconoces. También será un espacio de comunidad: aprender, reflexionar y explorar junto a otras personas mientras sigues tu propio camino.",
       format: "En línea, a tu ritmo, con comunidad",
       duration: "Acceso continuo",
       price: "Próximamente",
-      priceNote: "Escríbeme para entrar en la lista de espera.",
+      priceNote: "Únete a la lista de espera para recibir novedades.",
       forWho:
-        "Para quien quiere trabajar a su propio ritmo, con material de apoyo y el acompañamiento de un grupo.",
+        "Para quien quiere flexibilidad para explorar a su propio ritmo, con acceso a recursos prácticos y la experiencia de ser parte de una comunidad.",
       includes: [
-        "Lecciones en video",
-        "Ejercicios interactivos y herramientas prácticas",
-        "Comunidad de personas con el mismo compromiso",
-        "Comprensión más profunda de tu propia mente",
+        "Lecciones y programas guiados",
+        "Ejercicios y herramientas prácticas",
+        "Comunidad de personas en el mismo camino",
+        "Idioma: español e inglés",
       ],
       outcomes: [
         "Salir de patrones de pensamiento que te limitan",
@@ -211,20 +219,20 @@ export const services: Service[] = [
     },
     en: {
       name: "Membership Program",
-      tagline: "Lessons, exercises and a community that walks with you.",
+      tagline: "Lessons, programs, exercises and a community that walks with you.",
       summary:
-        "A membership with video lessons, interactive exercises and practical tools to look through new eyes and transform your life. It includes a community of people committed to finding freedom in every area of their lives.",
+        "A space designed for continued exploration through lessons, guided exercises, practical tools, and programs that invite you to look at your experiences from different perspectives and put what you recognize into practice. It will also be a space for community: opportunities to learn, reflect and explore alongside others while continuing to follow your own path.",
       format: "Online, at your pace, with community",
       duration: "Ongoing access",
       price: "Coming soon",
-      priceNote: "Message me to join the waiting list.",
+      priceNote: "Join the waiting list to receive updates.",
       forWho:
-        "For anyone who wants to work at their own pace, with supporting material and the company of a group.",
+        "For anyone who wants the flexibility to explore at their own pace, with access to practical resources and the experience of being part of a community.",
       includes: [
-        "Video lessons",
-        "Interactive exercises and practical tools",
-        "A community of people with the same commitment",
-        "A deeper understanding of your own mind",
+        "Guided lessons and programs",
+        "Exercises and practical tools",
+        "A community on the same path",
+        "Language: English and Spanish",
       ],
       outcomes: [
         "Break free from thought patterns that limit you",
@@ -243,50 +251,46 @@ export function serviceCopy(service: Service, locale: Locale): ServiceCopy {
   return locale === "es" ? service.es : service.en;
 }
 
-/** Maria Elena's story, as she tells it on her current site. Lightly formatted. */
+/**
+ * "My Path": Maria Elena's biography, approved copy from her brand guide
+ * ("HILINAI web.docx", section 7). English is the source text; Spanish is
+ * a faithful translation.
+ */
 export const story: Record<Locale, { lead: string; paragraphs: string[] }> = {
   es: {
-    lead: "No hay nada más valioso que la experiencia personal. Estas son las herramientas que dan forma a mi vida y que hoy comparto contigo.",
+    lead: "Creo que quien soy hoy no puede separarse de lo que he vivido, cuestionado, descubierto, aceptado y elegido en el camino.",
     paragraphs: [
-      "Nací en una familia de padres muy jóvenes. Mi madre tenía 16 años y mi padre 19. Al ser tan jóvenes, pasé mucho tiempo con mis abuelos. Por parte de mi madre fui hija, sobrina y nieta única durante mis primeros cinco años, lo que me convirtió en una niña muy consentida.",
-      "Cuando tenía ocho años, mis padres se divorciaron. Después de eso, mi padre empezó a beber y nuestra relación se volvió distante. Mi madre trabajó muy duro para sacarnos adelante a mi hermano y a mí.",
-      "A los 11 años tuve mi primera menstruación y sufrí acoso en la escuela porque mi cuerpo se desarrolló antes que el de mis compañeras. Mi adolescencia fue difícil. La ausencia de mi padre me llevó a buscar aprobación en los demás, y sobreviví creyendo que mi único valor era mi sexualidad. Tuve muchas relaciones, cada una dañando más mi autoestima.",
-      "Estudié economía y me gradué de la universidad a los 20 años. A los 21 me casé, pero la relación se convirtió en una dependencia poco sana. Mi elección de pareja reflejaba una atracción hacia cierto estereotipo, lo que llevó a un matrimonio de tres años que me dejó con el corazón roto, aunque también me hizo crecer.",
-      "Volví a casa de mi madre y nos mudamos a Santo Domingo, República Dominicana. Allí entré en otra relación de codependencia, con abuso y alcohol. Eso me llevó a buscar ayuda y empecé a asistir a reuniones de 12 pasos para codependientes. Fueron un tiempo de gran sanación.",
-      "Durante esa época descubrí una de mis mayores lecciones: hacerme responsable de mí misma. A los 33 me mudé a Estados Unidos y empecé a trabajar en el sector público. Por primera vez viví sola y logré estabilidad económica. Aprendí a estar conmigo misma y a disfrutar de mi soledad.",
-      "A los 37, en 2015, empecé a trabajar en Merrill Lynch, aplicando mi formación como economista. A los 43 me despidieron del banco y mi mundo cambió. Perdí mi identidad y todo lo que consideraba seguro se desvaneció. Entendí que había creído que necesitaba a otros para protegerme. Ese período difícil también fue uno de grandes lecciones de vida.",
-      "Descubrí que soy mucho más que un título profesional, que nadie me debe protección y que quienes de verdad me quieren me aceptan como soy.",
-      "Siempre me interesó el crecimiento personal y he sido muy curiosa con la espiritualidad. Uno de mis dones es la capacidad de conectar con el mundo invisible. Esto me llevó a estudiar Reiki en 2001 y, en 2011, cursos de sanación energética, sonoterapia y armonización. Cuando perdí mi trabajo en el banco, me dediqué por completo a esta pasión y empecé a trabajar con clientes.",
-      "A los 44 llegó mi hermoso hijo, que me inspiró a ser una mejor persona. Cuando Simón tenía seis meses, me diagnosticaron cáncer de mama. Ese diagnóstico cambió mi vida por completo. Recé por vivir, por la oportunidad de estar con mi hijo.",
-      "Mi trabajo gira en torno a la energía holística, así que decidí integrar mi conocimiento energético en la quimioterapia, la radioterapia y las múltiples cirugías. Me convertí en mi propia clienta.",
-      "Entendí que somos parte del planeta Tierra, parte de la naturaleza. Al conectar con ese saber descubrí nuestro poder de transformación. Podemos transformar todo lo que entra en nuestro cuerpo. Sabía que no podía cambiar mi situación, pero sí lo poderosa que era la energía que recibía.",
-      "Uno de los momentos más duros fue perder mi cabello. Verme calva en el espejo me quebró. Ahí entendí por fin qué era la depresión.",
-      "Encontré fuerza donde no la había y me recuperé. Hoy sigo con terapia hormonal. Terminé la quimio y la radiación, tuve mi reconstrucción y me siento bien en mi piel.",
-      "Ahora soy mucho más consciente de lo que pongo en mi cuerpo. Cada vez que como una fruta, conecto con la Tierra y siento gratitud. Aprendí que la sanación empieza en el intestino y que el hígado y los riñones son fundamentales.",
-      "Elegí el camino del crecimiento personal, con terapia semanal, a veces dos veces por semana, guiada por psicólogos y terapeutas. Estudié psicología Gestalt, Eneagrama y constelaciones familiares, y todo eso me ayudó a reconocerme y empoderarme.",
-      "Hoy mi camino es el autoconocimiento, el empoderamiento y la confianza. Confío en los procesos de la vida y vivo en equilibrio. Tengo un matrimonio hermoso, un hijo maravilloso, una familia que me quiere y una red de apoyo fuerte. Mi vida es tranquila, alegre y llena de confianza.",
+      "Mi vida ha incluido muchos de los desafíos que nos hacen humanos. He vivido relaciones que me hicieron cuestionar mi propio valor. He tenido que trabajar profundamente para entender patrones de dependencia, la necesidad de aprobación y la diferencia entre adaptarme para ser aceptada y tener el coraje de ser auténtica.",
+      "Construí una carrera como economista y después trabajé en servicios financieros. Durante años, mi identidad profesional representó estabilidad, logro y una idea de quién era. Cuando perdí mi trabajo de forma inesperada, el piso se movió bajo mis pies. Tuve que enfrentar una pregunta que se volvería central en mi camino: ¿quién soy cuando cambian los roles, los títulos y las estructuras que he usado para definirme?",
+      "La maternidad trajo otra transición profunda. Ser madre era algo que deseaba profundamente, y el camino hacia la maternidad me desafió de maneras que no había anticipado. Me invitó a encontrar partes nuevas de mí: mi fuerza, mis miedos, mi vulnerabilidad y un amor que cambió la forma en que entendía mi lugar en el mundo.",
+      "Después llegó uno de los mayores retos de mi vida: el cáncer de mama. Pasé por tratamiento, cirugías, incertidumbre, cambios físicos, miedo y recuperación, mientras aprendía a vivir dentro de un cuerpo y una vida que estaban cambiando. El cáncer se volvió parte de mi historia, pero elegí no convertirlo en mi identidad.",
+      "Junto a estas experiencias, nunca he dejado de explorar quién soy. Mi curiosidad me ha llevado por la terapia, el estudio personal, la espiritualidad, las prácticas energéticas, la Gestalt, el Eneagrama, las constelaciones familiares y años de cuestionar mis propias creencias y patrones. Algunas cosas se han quedado conmigo; otras han cambiado a medida que yo he cambiado.",
+      "Todavía sigo descubriéndome.",
+      "He aprendido a reconocer y aceptar tanto mi luz como mi sombra: las partes de mí que celebro y las que siguen desafiándome. No creo que el autoconocimiento sea un destino al que se llega. A medida que la vida cambia, nos encontramos de nuevo con nosotros mismos.",
+      "Eso es parte de lo que dio origen a Hilinai. No una vida perfecta. No tener todas las respuestas. No la creencia de que mi camino deba convertirse en el camino de alguien más.",
+      "Hilinai nació de la experiencia de sentir, una y otra vez, que el piso se movía bajo mis pies, y de descubrir que podía mirar de nuevo, reconocerme de nuevo, elegir de nuevo y moverme de nuevo.",
+      "Hoy no me paro frente a otra persona porque ya resolví la vida. Camino a su lado como un ser humano que sabe lo que es cuestionar, cambiar, empezar de nuevo y seguir descubriendo quién es.",
     ],
   },
   en: {
-    lead: "There is nothing more valuable than personal experience. These are the tools that shape my life, and today I share them with you.",
+    lead: "I believe that who I am today cannot be separated from what I have lived, questioned, discovered, accepted, and chosen along the way.",
     paragraphs: [
-      "I was born into a family with very young parents. My mother was 16 and my father was 19. Because they were so young, I spent much of my early childhood with my grandparents. On my mother's side I was an only daughter, niece and granddaughter for my first five years, which made me a very spoiled child.",
-      "When I was eight, my parents divorced. After that, my father started drinking and our relationship became distant. My mother worked very hard to support my brother and me.",
-      "At 11 I got my first period and was bullied at school because my body developed faster than my classmates'. My teenage years were difficult. My father's absence led me to seek approval from others, and I survived by believing that my only value was my sexuality. I had many relationships, each one damaging my self esteem further.",
-      "I studied economics and graduated from university at 20. At 21 I got married, but the relationship became an unhealthy dependency. My choice of partner reflected an attraction to a certain stereotype, which led to a three year marriage that left me heartbroken, though it also helped me grow.",
-      "I returned to my mother's home and we moved to Santo Domingo, Dominican Republic. There I entered another codependent relationship, with abuse and alcohol. That led me to seek help, and I began attending 12 step meetings for codependents. They were a time of great healing.",
-      "During that time I discovered one of my greatest lessons: taking responsibility for myself. At 33 I moved to the United States and started working in the public sector. For the first time I lived alone and achieved financial stability. I learned to be with myself and to enjoy my solitude.",
-      "At 37, in 2015, I began working at Merrill Lynch, applying my background as an economist. At 43 I was laid off from the bank and my world changed. I lost my identity, and everything I considered secure vanished. I realized I had believed I needed others to protect me. That difficult period was also one of great life lessons.",
-      "I discovered that I am much more than a professional title, that no one owes me protection, and that the people who truly love me accept me as I am.",
-      "I have always been interested in personal growth and very curious about spirituality. One of my gifts is the ability to connect with the unseen world. This led me to study Reiki in 2001 and, in 2011, courses in energy healing, sound therapy and harmonization. When I lost my job at the bank, I dedicated myself fully to this passion and began working with clients.",
-      "At 44 my beautiful son arrived, inspiring me to become a better person. When Simon was six months old, I was diagnosed with breast cancer. That diagnosis changed my life completely. I prayed for life, for the chance to be with my son.",
-      "My work revolves around holistic energy, so I decided to integrate my energy knowledge into my chemotherapy, radiotherapy and multiple surgeries. I became my own client.",
-      "I understood that we are part of planet Earth, part of nature. Connecting with that knowledge, I discovered our power of transformation. We can transform everything that enters our body. I knew I could not change my situation, but I knew how powerful the energy I received was.",
-      "One of the hardest moments was losing my hair. Seeing myself bald in the mirror shattered me. That is when I finally understood what depression felt like.",
-      "I found strength where there was none and I recovered. Today I continue with hormone therapy. I finished chemo and radiation, had my reconstruction, and I feel good in my skin.",
-      "Now I am much more conscious of what I put into my body. Every time I eat a piece of fruit, I connect with the Earth and feel grateful. I learned that healing starts in the gut, and that the liver and kidneys play a crucial role.",
-      "I chose the path of personal growth, with weekly therapy, sometimes twice a week, guided by knowledgeable psychologists and therapists. I studied Gestalt psychology, the Enneagram and family constellations, and all of it helped me recognize and empower myself.",
-      "Today my path is self knowledge, empowerment and trust. I trust life's processes and live in balance. I have a beautiful marriage, an amazing son, a loving family and a strong support network. My life is calm, joyful and filled with confidence.",
+      "My life has included many of the challenges that make us human. I have experienced relationships that made me question my own worth. I have had to work deeply to understand patterns of dependency, the need for approval, and the difference between adapting to be accepted and having the courage to be authentic.",
+      "I built a career as an economist and later worked in financial services. For years, my professional identity represented stability, achievement, and a sense of who I was. When I unexpectedly lost my job, the ground beneath me shifted. I had to confront a question that would become central to my own path: Who am I when the roles, titles, and structures I have used to define myself change?",
+      "Motherhood brought another profound transition. Becoming a mother was something I deeply desired, and the path into motherhood challenged me in ways I had not anticipated. It invited me to meet new parts of myself: my strength, my fears, my vulnerability, and a love that changed the way I understood my place in the world.",
+      "Then came one of the greatest challenges of my life: breast cancer. I went through treatment, surgeries, uncertainty, physical changes, fear, and recovery while learning how to live inside a body and a life that were changing. Cancer became part of my story, but I chose not to make it my identity.",
+      "Alongside these experiences, I have never stopped exploring who I am. My curiosity has taken me through therapy, personal study, spirituality, energy practices, Gestalt, the Enneagram, family constellations, and years of questioning my own beliefs and patterns. Some things have stayed with me; others have changed as I have changed.",
+      "I am still discovering myself.",
+      "I have learned to recognize and accept both my light and my shadow: the parts of myself I celebrate and the parts that continue to challenge me. I don't believe self-knowledge is a destination we reach. As life changes, we meet ourselves again.",
+      "That is part of what gave birth to Hilinai. Not a perfect life. Not having all the answers. Not a belief that my path should become someone else's path.",
+      "Hilinai grew from the experience of repeatedly having the ground move beneath me and discovering that I could look again, recognize myself again, choose again, and move again.",
+      "Today, I don't stand in front of another person because I have figured life out. I stand beside them as a human being who knows what it is to question, to change, to begin again, and to keep discovering who I am.",
     ],
   },
+};
+
+/** Approved standalone philosophy statement (brand guide section 8). */
+export const philosophy: Record<Locale, string> = {
+  es: "La compasión es honrar el proceso de otra persona sin interferir en él.",
+  en: "Compassion is honoring another person's process without interfering with it.",
 };

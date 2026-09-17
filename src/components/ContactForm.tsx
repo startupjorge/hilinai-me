@@ -33,8 +33,8 @@ export function ContactForm({ dict }: { dict: Dictionary["contactPage"] }) {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: `Hilina'i Me: mensaje de ${name}`,
-          from_name: "Hilina'i Me",
+          subject: `HILINAI: mensaje de ${name}`,
+          from_name: "HILINAI",
           name,
           email,
           interest,
@@ -101,7 +101,7 @@ export function ContactForm({ dict }: { dict: Dictionary["contactPage"] }) {
       </button>
 
       <p
-        className={`text-xs ${status === "error" ? "text-coral-deep" : "text-ink-soft"}`}
+        className={`text-xs ${status === "error" ? "text-alert-deep" : "text-ink-soft"}`}
       >
         {status === "error" ? (
           <>

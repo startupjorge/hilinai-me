@@ -7,7 +7,7 @@ import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localePath } from "@/i18n/routing";
 import { socials } from "@/content/site";
-import { LogoMark, Wordmark } from "./Logo";
+import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { SocialIcon } from "./SocialIcon";
 
@@ -35,11 +35,10 @@ export function Header({
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-5 sm:px-8">
         <Link
           href={localePath(locale, "/")}
-          className="flex items-center gap-2.5 text-sea"
           onClick={() => setOpen(false)}
         >
-          <LogoMark className="h-8 w-8" />
-          <Wordmark className="text-ink" />
+          <Logo variant="horizontal" height={30} priority className="hidden sm:block" />
+          <Logo variant="icon" height={34} priority className="sm:hidden" />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">

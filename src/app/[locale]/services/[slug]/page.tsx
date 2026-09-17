@@ -107,7 +107,7 @@ export default async function ServiceDetailPage({
                       key={item}
                       className="flex gap-2 text-sm leading-relaxed text-ink-soft"
                     >
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-coral" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sand-deep" />
                       {item}
                     </li>
                   ))}

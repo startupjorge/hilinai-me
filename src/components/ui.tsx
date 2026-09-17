@@ -17,8 +17,7 @@ export function Container({
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-sea">
-      <span className="h-px w-6 bg-sea/50" />
+    <span className="inline-flex items-center text-xs font-semibold uppercase tracking-[0.18em] text-sea">
       {children}
     </span>
   );
@@ -89,6 +88,22 @@ export function SectionHeading({
         </p>
       )}
     </div>
+  );
+}
+
+export function MailIcon(props: ComponentProps<"svg">) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      aria-hidden
+      {...props}
+    >
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m4 7 8 6 8-6" />
+    </svg>
   );
 }
 

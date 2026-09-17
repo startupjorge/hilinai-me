@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { localePath } from "@/i18n/routing";
-import { brand, story, whatsappLink } from "@/content/site";
+import { brand, philosophy, story, whatsappLink } from "@/content/site";
 import { Container, Eyebrow, Button, WhatsAppIcon } from "@/components/ui";
 
 export async function generateMetadata({
@@ -11,7 +11,10 @@ export async function generateMetadata({
 }: PageProps<"/[locale]/about">): Promise<Metadata> {
   const { locale } = await params;
   const dict = getDictionary(isLocale(locale) ? locale : "es");
-  return { title: dict.aboutPage.title, description: dict.aboutPage.intro };
+  return {
+    title: dict.aboutPage.title,
+    description: dict.aboutPage.introParagraphs[0],
+  };
 }
 
 export default async function AboutPage({
@@ -35,9 +38,13 @@ export default async function AboutPage({
             <p className="mt-2 text-sm font-medium uppercase tracking-wide text-sea">
               {t.role}
             </p>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
-              {t.intro}
-            </p>
+            <div className="mt-5 max-w-xl space-y-4">
+              {t.introParagraphs.map((p, i) => (
+                <p key={i} className="text-lg leading-relaxed text-ink-soft">
+                  {p}
+                </p>
+              ))}
+            </div>
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-ink/10 shadow-xl shadow-ink/10">
             <Image
@@ -52,8 +59,8 @@ export default async function AboutPage({
         </Container>
       </section>
 
-      {/* Approach */}
-      <section>
+      {/* Approach: How I Work */}
+      <section id="how-i-work" className="scroll-mt-20">
         <Container className="py-16 sm:py-20">
           <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
             {t.approachTitle}
@@ -76,8 +83,8 @@ export default async function AboutPage({
         </Container>
       </section>
 
-      {/* Story */}
-      <section className="border-y border-ink/10 bg-paper-deep">
+      {/* Story: My Path */}
+      <section id="my-path" className="scroll-mt-20 border-y border-ink/10 bg-paper-deep">
         <Container className="py-16 sm:py-20">
           <div className="mx-auto max-w-2xl">
             <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
@@ -93,6 +100,15 @@ export default async function AboutPage({
                 </p>
               ))}
             </div>
+
+            <blockquote className="mt-10 border-l-2 border-sea/40 pl-5">
+              <p className="font-display text-lg italic leading-relaxed text-ink">
+                &ldquo;{philosophy[l]}&rdquo;
+              </p>
+              <footer className="mt-2 text-xs font-medium uppercase tracking-wide text-ink-soft">
+                {t.philosophyLabel}
+              </footer>
+            </blockquote>
           </div>
         </Container>
       </section>

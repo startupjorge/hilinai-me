@@ -3,25 +3,26 @@ import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localePath } from "@/i18n/routing";
 import { brand, socials, tagline, whatsappLink } from "@/content/site";
-import { LogoMark, Wordmark } from "./Logo";
+import { Logo } from "./Logo";
+import { MailIcon } from "./ui";
 import { SocialIcon } from "./SocialIcon";
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const nav = [
+    { href: localePath(locale, "/"), label: dict.nav.home },
     { href: localePath(locale, "/services"), label: dict.nav.services },
     { href: localePath(locale, "/about"), label: dict.nav.about },
-    { href: localePath(locale, "/book"), label: dict.nav.book },
+    { href: `${localePath(locale, "/about")}#how-i-work`, label: dict.aboutPage.approachTitle },
+    { href: `${localePath(locale, "/about")}#my-path`, label: dict.aboutPage.storyTitle },
     { href: localePath(locale, "/contact"), label: dict.nav.contact },
+    { href: localePath(locale, "/book"), label: dict.nav.book },
   ];
 
   return (
     <footer className="mt-auto border-t border-ink/10 bg-paper-deep">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-2.5 text-sea">
-            <LogoMark className="h-8 w-8" />
-            <Wordmark className="text-ink" />
-          </div>
+          <Logo variant="horizontal" height={32} />
           <p className="mt-4 max-w-sm font-display text-base leading-relaxed text-ink-soft">
             {tagline[locale]}
           </p>
@@ -58,6 +59,15 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 {brand.whatsappDisplay}
               </a>
             </li>
+            <li>
+              <a
+                href={`mailto:${brand.email}`}
+                className="inline-flex items-center gap-2 text-ink-soft hover:text-ink"
+              >
+                <MailIcon className="h-4 w-4" />
+                {brand.email}
+              </a>
+            </li>
           </ul>
 
           <div className="mt-5 flex items-center gap-2">
@@ -82,7 +92,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <p>
             &copy; {new Date().getFullYear()} {brand.legalName}. {dict.footer.rights}
           </p>
-          <p>{brand.city}</p>
+          <p>{locale === "es" ? brand.availabilityEs : brand.availabilityEn}</p>
         </div>
       </div>
     </footer>

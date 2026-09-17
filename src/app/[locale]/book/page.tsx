@@ -111,7 +111,8 @@ export default async function BookPage({
                 </a>
               </div>
               <p className="mt-4 text-xs text-ink-soft">
-                {brand.whatsappDisplay} &middot; {brand.city}
+                {brand.whatsappDisplay} &middot;{" "}
+                {l === "es" ? brand.availabilityEs : brand.availabilityEn}
               </p>
 
               <div className="mt-6 border-t border-ink/10 pt-5">

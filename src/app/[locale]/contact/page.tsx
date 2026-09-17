@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
-import { brand, socials, whatsappLink } from "@/content/site";
-import { Container, Eyebrow, WhatsAppIcon } from "@/components/ui";
+import { brand, whatsappLink } from "@/content/site";
+import { Container, Eyebrow, MailIcon, WhatsAppIcon } from "@/components/ui";
 import { ContactForm } from "@/components/ContactForm";
 import { SocialIcon } from "@/components/SocialIcon";
 
@@ -26,7 +26,7 @@ export default async function ContactPage({
     label: string;
     value: string;
     href: string;
-    icon: "whatsapp" | (typeof socials)[number]["key"];
+    icon: "whatsapp" | "email" | "instagram";
   }[] = [
     {
       label: t.whatsappLabel,
@@ -34,12 +34,18 @@ export default async function ContactPage({
       href: whatsappLink(),
       icon: "whatsapp",
     },
-    ...socials.map((s) => ({
-      label: s.label,
-      value: s.label,
-      href: s.href,
-      icon: s.key,
-    })),
+    {
+      label: t.emailLabel,
+      value: brand.email,
+      href: `mailto:${brand.email}`,
+      icon: "email",
+    },
+    {
+      label: t.instagramLabel,
+      value: "@hilinai_me",
+      href: brand.instagram,
+      icon: "instagram",
+    },
   ];
 
   return (
@@ -74,7 +80,11 @@ export default async function ContactPage({
                 <div key={r.label} className="flex items-center justify-between gap-4 py-3.5">
                   <dt className="flex items-center gap-2.5 text-sm text-ink-soft">
                     <span className="text-sea">
-                      <SocialIcon name={r.icon} className="h-4 w-4" />
+                      {r.icon === "email" ? (
+                        <MailIcon className="h-4 w-4" />
+                      ) : (
+                        <SocialIcon name={r.icon} className="h-4 w-4" />
+                      )}
                     </span>
                     {r.label}
                   </dt>
@@ -93,7 +103,7 @@ export default async function ContactPage({
               <div className="flex items-center justify-between gap-4 py-3.5">
                 <dt className="text-sm text-ink-soft">{t.locationLabel}</dt>
                 <dd className="text-sm font-medium text-ink text-right">
-                  {t.locationValue}
+                  {l === "es" ? brand.availabilityEs : brand.availabilityEn}
                 </dd>
               </div>
             </dl>

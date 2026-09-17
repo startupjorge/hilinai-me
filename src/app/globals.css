@@ -1,32 +1,32 @@
 @import "tailwindcss";
 
 /*
-  Hilina'i Me design tokens.
-  Calm, oceanic, grounded. Blues and a warm coral accent,
-  drawn from Maria Elena's mandala and her existing brand.
+  HILINAI official brand system.
+  Source: "HILINAI web.docx" brand visual system table.
+  Primary/blue/light blue are the three Hilinai blues; the sand tones and
+  pale blue are the secondary palette. Do not introduce colors outside
+  this set for brand surfaces.
 */
 
 @theme {
-  --color-paper: #f7f6f1;
-  --color-paper-deep: #eeece3;
-  --color-sand: #e4ddcd;
+  --color-paper: #f8f7f2; /* Secondary: warm off-white */
+  --color-paper-deep: #f1e8df; /* Sand: light */
+  --color-sand: #d7c1a6; /* Sand: medium */
+  --color-sand-deep: #b49f89; /* Sand: deep */
 
-  --color-ink: #21303a;
-  --color-ink-soft: #55636d;
+  --color-ink: #193c6a; /* Primary: deep Hilinai blue */
+  --color-ink-soft: #45608c; /* muted tint of the deep blue, for body copy */
 
-  --color-sea: #2f6d9e;
-  --color-sea-deep: #234f73;
-  --color-sea-light: #a7c8dd;
-  --color-mist: #dfeaf1;
+  --color-sea: #4871b3; /* Blue: medium Hilinai blue */
+  --color-sea-deep: #193c6a; /* same as ink: primary/deep blue */
+  --color-sea-light: #98b6e4; /* Light blue: soft Hilinai blue */
+  --color-mist: #d6e2f2; /* Secondary: pale blue */
 
-  --color-iris: #5b53b8;
-  --color-iris-light: #ded9f2;
-
-  --color-coral: #d9774f;
-  --color-coral-deep: #bd5c37;
+  --color-alert: #b3261e; /* not a brand color: form error state only */
+  --color-alert-deep: #8c1d17;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-corbert), Georgia, "Times New Roman", serif;
 
   --radius-xl: 1.25rem;
 }
